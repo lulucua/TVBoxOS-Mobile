@@ -128,7 +128,7 @@ public class ApiConfig {
     }
 
     public void loadConfig(boolean useCache, LoadConfigCallback callback, Activity activity) {
-        String apiUrl = Hawk.get(HawkConfig.API_URL, "");
+        String apiUrl = Hawk.get(HawkConfig.API_URL, "https://jihulab.com/moyuer/momoyu/-/raw/main/moyuer.json");
         if (apiUrl.isEmpty()) {
             callback.error("-1");
             return;
@@ -375,7 +375,7 @@ public class ApiConfig {
         }
         // 直播源
         liveChannelGroupList.clear();           //修复从后台切换重复加载频道列表
-        String liveURL = Hawk.get(HawkConfig.LIVE_URL, "");
+        String liveURL = Hawk.get(HawkConfig.LIVE_URL, "https://jihulab.com/moyuer/momoyu/-/raw/main/moyuive.txt");
         //String epgURL  = Hawk.get(HawkConfig.EPG_URL, "");
 
         String liveURL_final = null;
